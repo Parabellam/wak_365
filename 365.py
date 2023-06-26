@@ -3117,28 +3117,12 @@ def on_press(key):
 
 def on_release(key):
     global timer
+    key_to_hours = {keyboard.KeyCode.from_char(str(i)): i for i in range(1, 10)} # Hasta 9 horas
+
     if key == keyboard.Key.ctrl_l:
         print("Ctrl liberado")
-    elif key in [keyboard.KeyCode.from_char(str(i)) for i in range(1, 10)] and timer is None:
-        if key == keyboard.KeyCode.from_char('1'):
-            hours = 1
-        elif key == keyboard.KeyCode.from_char('2'):
-            hours = 2
-        elif key == keyboard.KeyCode.from_char('3'):
-            hours = 3
-        elif key == keyboard.KeyCode.from_char('4'):
-            hours = 4
-        elif key == keyboard.KeyCode.from_char('5'):
-            hours = 5
-        elif key == keyboard.KeyCode.from_char('6'):
-            hours = 6
-        elif key == keyboard.KeyCode.from_char('7'):
-            hours = 7
-        elif key == keyboard.KeyCode.from_char('8'):
-            hours = 8
-        elif key == keyboard.KeyCode.from_char('9'):
-            hours = 9
-        # ... Agrega casos para los demás números
+    elif key in key_to_hours and timer is None:
+        hours = key_to_hours[key]
         print(f"Detener el programa en {hours} horas")
         timer = threading.Timer(hours * 3600, stop_program)
         timer.start()
