@@ -3124,6 +3124,20 @@ def on_release(key):
             hours = 1
         elif key == keyboard.KeyCode.from_char('2'):
             hours = 2
+        elif key == keyboard.KeyCode.from_char('3'):
+            hours = 3
+        elif key == keyboard.KeyCode.from_char('4'):
+            hours = 4
+        elif key == keyboard.KeyCode.from_char('5'):
+            hours = 5
+        elif key == keyboard.KeyCode.from_char('6'):
+            hours = 6
+        elif key == keyboard.KeyCode.from_char('7'):
+            hours = 7
+        elif key == keyboard.KeyCode.from_char('8'):
+            hours = 8
+        elif key == keyboard.KeyCode.from_char('9'):
+            hours = 9
         # ... Agrega casos para los demás números
         print(f"Detener el programa en {hours} horas")
         timer = threading.Timer(hours * 3600, stop_program)
@@ -3133,25 +3147,26 @@ running = True
 timer = None
 
 try:
-    while True:
-        # Acceder a las posiciones de imágenes de manera dinámica
-        for i in range(1, np + 1):
-            image_key = f"p{i}"
-            position = positions.get(image_key, None)
-            searching = False
+    with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
+        while running:
+            # Acceder a las posiciones de imágenes de manera dinámica
+            for i in range(1, np + 1):
+                image_key = f"p{i}"
+                position = positions.get(image_key, None)
+                searching = False
 
-            while not searching:
-                if position:
-                    searching = True
-                    time.sleep(0.1)
-                    # Dar doble click en la posición de la imagen del personaje a seleccionar
-                    pyautogui.doubleClick(position)
-                    time.sleep(0.1)
-                    pyautogui.doubleClick(position)  # Para garantizar que entre
-                    # Llamar a la función para realizar la acción deseada
-                    perform_action(image_key, position)
-                else:
-                    print("x")
+                while not searching:
+                    if position:
+                        searching = True
+                        time.sleep(0.1)
+                        # Dar doble click en la posición de la imagen del personaje a seleccionar
+                        pyautogui.doubleClick(position)
+                        time.sleep(0.1)
+                        pyautogui.doubleClick(position)  # Para garantizar que entre
+                        # Llamar a la función para realizar la acción deseada
+                        perform_action(image_key, position)
+                    else:
+                        print("x")
 except Exception as e:
     print(f"Se produjo un error: {e}")
 finally:
