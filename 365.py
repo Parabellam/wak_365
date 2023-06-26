@@ -3130,27 +3130,35 @@ def on_release(key):
 running = True
 timer = None
 
+def process_images(positions):
+    while running:
+        # Acceder a las posiciones de imágenes de manera dinámica
+        for i in range(1, np + 1):
+            image_key = f"p{i}"
+            position = positions.get(image_key, None)
+            searching = False
+
+            while not searching:
+                if position:
+                    searching = True
+                    time.sleep(0.1)
+                    # Dar doble click en la posición de la imagen del personaje a seleccionar
+                    pyautogui.doubleClick(position)
+                    time.sleep(0.1)
+                    pyautogui.doubleClick(position)  # Para garantizar que entre
+                    # Llamar a la función para realizar la acción deseada
+                    perform_action(image_key, position)
+                else:
+                    print("x")
+
 try:
     with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
-        while running:
-            # Acceder a las posiciones de imágenes de manera dinámica
-            for i in range(1, np + 1):
-                image_key = f"p{i}"
-                position = positions.get(image_key, None)
-                searching = False
-
-                while not searching:
-                    if position:
-                        searching = True
-                        time.sleep(0.1)
-                        # Dar doble click en la posición de la imagen del personaje a seleccionar
-                        pyautogui.doubleClick(position)
-                        time.sleep(0.1)
-                        pyautogui.doubleClick(position)  # Para garantizar que entre
-                        # Llamar a la función para realizar la acción deseada
-                        perform_action(image_key, position)
-                    else:
-                        print("x")
+        process_images(positions)
+        
+except FileNotFoundError as e:
+    print(f"Error de archivo no encontrado: {e}")
+except ValueError as e:
+    print(f"Error de valor: {e}")
 except Exception as e:
     print(f"Se produjo un error: {e}")
 finally:
