@@ -178,6 +178,7 @@ minarboton_img={ # Botón minar
     "minar1": os.path.join("imgs_programa", "minar1.png"),
     "minar2": os.path.join("imgs_programa", "minar2.png"),
     "minar3": os.path.join("imgs_programa", "minar3.png"),
+    "minar4": os.path.join("imgs_programa", "minar4.png"),
 }
 
 print("------------------------INICIO-------------------------------------------------------")
@@ -378,7 +379,7 @@ def action_for_p1(position):
     pyautogui.rightClick(1026, 372)
     encontradas=0
     pyautogui.moveTo(0, 0)
-    time.sleep(0.2)
+    time.sleep(0.5)
     for _, image_path228Q in minarboton_img.items(): # Buscar botón minar
         locationminarboton_img5Q=None
         locationminarboton_img5Q = pyautogui.locateOnScreen(image_path228Q, confidence=0.9)
@@ -390,11 +391,10 @@ def action_for_p1(position):
             time.sleep(5.2) # Tiempo que tarda en llegar y minar
             pyautogui.rightClick(251, 283)
             pyautogui.moveTo(0, 0)
-            time.sleep(0.2)
+            time.sleep(0.5)
             for _, image_path228QR in minarboton_img.items(): # Buscar botón minar
                 locationminarboton_img5QR=None
                 locationminarboton_img5QR = pyautogui.locateOnScreen(image_path228QR, confidence=0.9)
-                time.sleep(0.2)
                 if locationminarboton_img5QR:
                     encontradas+=1
                     center = pyautogui.center(locationminarboton_img5QR)
@@ -406,11 +406,10 @@ def action_for_p1(position):
     pyautogui.rightClick(554, 304)
     pyautogui.moveTo(0, 0)
     encontradas=0
-    time.sleep(0.2)
+    time.sleep(0.5)
     for _, image_path228QQ in minarboton_img.items(): # Buscar botón minar
         locationminarboton_img5QQ=None
         locationminarboton_img5QQ = pyautogui.locateOnScreen(image_path228QQ, confidence=0.9)
-        time.sleep(0.2)
         if locationminarboton_img5QQ:
             encontradas+=1
             center = pyautogui.center(locationminarboton_img5QQ)
@@ -422,23 +421,21 @@ def action_for_p1(position):
     encontradas=0
     no_encontro_nada=0
     pyautogui.moveTo(0, 0)
-    time.sleep(0.3)
+    time.sleep(0.5)
     for _, image_path11X in img_p1_temporal.items(): # Buscar filón
         if contador>=25 or encontradas>=5:
             break
         mina881X=None
         mina881X = pyautogui.locateOnScreen(image_path11X, confidence=0.9, grayscale=True)
-        time.sleep(0.2)
         if mina881X:
             center1X = pyautogui.center(mina881X)
             pyautogui.rightClick(center1X)
             del mina881X
             pyautogui.moveTo(0, 0)
-            time.sleep(0.3)
+            time.sleep(0.5)
             for _, image_path227X in minarboton_img.items(): # Buscar botón minar
                 locationminarboton_img5=None
                 locationminarboton_img5 = pyautogui.locateOnScreen(image_path227X, confidence=0.9, region=abajo_region)
-                time.sleep(0.2)
                 if locationminarboton_img5:
                     encontradas+=1
                     center = pyautogui.center(locationminarboton_img5)
@@ -451,7 +448,7 @@ def action_for_p1(position):
     encontradas=0
     no_encontro_nada=0
     pyautogui.moveTo(0, 0)
-    time.sleep(0.3)
+    time.sleep(0.5)
     while contador<25:
         if contador>=25:
             print("if contador>=25:")
@@ -462,18 +459,16 @@ def action_for_p1(position):
                 break
             mina881=None
             mina881 = pyautogui.locateOnScreen(image_path11, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina881:
                 print("if mina881:")
                 center1 = pyautogui.center(mina881)
                 pyautogui.rightClick(center1)
                 del mina881
                 pyautogui.moveTo(0, 0)
-                time.sleep(0.3)
+                time.sleep(0.5)
                 for _, image_path227 in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5=None
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path227, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5)
@@ -482,10 +477,10 @@ def action_for_p1(position):
                         time.sleep(6.2) # Tiempo que tarda en llegar y minar
                         no_encontro_nada=1
             contador+=1
+    time.sleep(0.5)
     for _, image_path228QRS in minarboton_img.items(): # Buscar botón minar
         locationminarboton_img5QRS=None
         locationminarboton_img5QRS = pyautogui.locateOnScreen(image_path228QRS, confidence=0.9)
-        time.sleep(0.2)
         if locationminarboton_img5QRS:
             encontradas+=1
             center = pyautogui.center(locationminarboton_img5QRS)
@@ -495,7 +490,7 @@ def action_for_p1(position):
     if(no_encontro_nada==1):
         foundX=False
         pyautogui.moveTo(0, 0)
-        time.sleep(0.3)
+        time.sleep(0.5)
         for _, image_path in img_unica.items():
             if foundX:
                 break
@@ -513,7 +508,7 @@ def action_for_p2(position):
 
     pyautogui.rightClick(725, 599)
     pyautogui.moveTo(0, 0)
-    time.sleep(0.2)
+    time.sleep(0.5)
     for _, image_path228Q in minarboton_img.items(): # Buscar botón minar
         locationminarboton_img5Q=None
         locationminarboton_img5Q = pyautogui.locateOnScreen(image_path228Q, confidence=0.9)
@@ -524,7 +519,7 @@ def action_for_p2(position):
             time.sleep(5.4) # Tiempo que tarda en llegar y minar
             pyautogui.rightClick(167, 63)
             pyautogui.moveTo(0, 0)
-            time.sleep(0.2)
+            time.sleep(0.5)
             for _, image_path228QR in minarboton_img.items(): # Buscar botón minar
                 locationminarboton_img5QR=None
                 locationminarboton_img5QR = pyautogui.locateOnScreen(image_path228QR, confidence=0.9)
@@ -537,11 +532,10 @@ def action_for_p2(position):
 
     pyautogui.rightClick(166, 277)
     pyautogui.moveTo(0, 0)
-    time.sleep(0.2)
+    time.sleep(0.5)
     for _, image_path228QQ in minarboton_img.items(): # Buscar botón minar
         locationminarboton_img5QQ=None
         locationminarboton_img5QQ = pyautogui.locateOnScreen(image_path228QQ, confidence=0.9)
-        time.sleep(0.2)
         if locationminarboton_img5QQ:
             center = pyautogui.center(locationminarboton_img5QQ)
             del locationminarboton_img5QQ
@@ -567,9 +561,9 @@ def action_for_p2(position):
                 center1 = pyautogui.center(minaQ)
                 del minaQ
                 pyautogui.rightClick(center1)
+                time.sleep(0.5)
                 for _, image_path228 in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path228, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5)
@@ -595,9 +589,9 @@ def action_for_p2(position):
                 center1 = pyautogui.center(mina)
                 del mina
                 pyautogui.rightClick(center1)
+                time.sleep(0.5)
                 for _, image_path228 in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path228, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5)
@@ -626,6 +620,7 @@ def action_for_p2(position):
                 del mina2
                 pyautogui.click(center1)
                 time.sleep(3.2)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -658,6 +653,7 @@ def action_for_p2(position):
                 del mina25
                 pyautogui.click(center1)
                 time.sleep(3.2)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -688,9 +684,9 @@ def action_for_p2(position):
                 center1 = pyautogui.center(mina4)
                 del mina4
                 pyautogui.rightClick(center1)
+                time.sleep(0.5)
                 for _, image_path277 in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path277, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5)
@@ -716,7 +712,6 @@ def action_for_p2(position):
                 break
             mina111=None
             mina111 = pyautogui.locateOnScreen(image_path16, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina111:
                 contador=4
                 print("Encontró punto de apoyo 3")
@@ -725,6 +720,7 @@ def action_for_p2(position):
                 pyautogui.click(center1)
                 time.sleep(3)
                 encontrado=1
+                break
             else:
                 contador+=1
                 print("NO Encontró punto de apoyo 3")
@@ -753,7 +749,6 @@ def action_for_p2(position):
                     break
                 mina12=None
                 mina12 = pyautogui.locateOnScreen(image_path17, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina12:
                     contador=4
                     print("Encontró punto de apoyo 2")
@@ -761,6 +756,7 @@ def action_for_p2(position):
                     del mina12
                     pyautogui.click(center1)
                     time.sleep(3.2)
+                    break
                 else:
                     contador+=1
                     print("NO Encontró punto de apoyo 2")
@@ -787,7 +783,6 @@ def action_for_p2(position):
                     break
                 mina13=None
                 mina13 = pyautogui.locateOnScreen(image_path18, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina13:
                     contador=4
                     encontrado=1
@@ -795,6 +790,7 @@ def action_for_p2(position):
                     del mina13
                     pyautogui.click(center1)
                     time.sleep(2.8)
+                    break
                 else:
                     contador+=1
                     buscando_apoyo+=1
@@ -819,15 +815,14 @@ def action_for_p2(position):
                     break
                 mina5=None
                 mina5 = pyautogui.locateOnScreen(image_path19, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina5:
                     contador+=1
                     center1 = pyautogui.center(mina5)
                     del mina5
                     pyautogui.rightClick(center1)
+                    time.sleep(0.5)
                     for _, image_path278 in minarboton_img.items(): # Buscar botón minar
                         locationminarboton_img5 = pyautogui.locateOnScreen(image_path278, confidence=0.9)
-                        time.sleep(0.2)
                         if locationminarboton_img5:
                             encontradas+=1
                             center = pyautogui.center(locationminarboton_img5)
@@ -852,7 +847,6 @@ def action_for_p2(position):
                 break
             mina8=None
             mina8 = pyautogui.locateOnScreen(image_path112, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina8:
                 contador=4
                 print("Encontró punto de apoyo 4")
@@ -861,6 +855,7 @@ def action_for_p2(position):
                 del mina8
                 pyautogui.click(center1)
                 time.sleep(3.2)
+                break
             else:
                 contador+=1
                 print("NO Encontró punto de apoyo 4")
@@ -890,7 +885,6 @@ def action_for_p2(position):
                     break
                 mina6=None
                 mina6 = pyautogui.locateOnScreen(image_path113, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina6:
                     contador=4
                     encontrado=1
@@ -898,6 +892,7 @@ def action_for_p2(position):
                     del mina6
                     pyautogui.click(center1)
                     time.sleep(3.2)
+                    break
                 else:
                     contador+=1
                     buscando_apoyo+=1
@@ -933,6 +928,7 @@ def action_for_p2(position):
                     del mina15
                     pyautogui.click(center1)
                     time.sleep(3.2)
+                    break
                 else:
                     contador+=1
                     buscando_apoyo+=1
@@ -963,9 +959,9 @@ def action_for_p2(position):
                     center1 = pyautogui.center(mina9)
                     del mina9
                     pyautogui.rightClick(center1)
+                    time.sleep(0.5)
                     for _, image_path279 in minarboton_img.items(): # Buscar botón minar
                         locationminarboton_img5 = pyautogui.locateOnScreen(image_path279, confidence=0.9)
-                        time.sleep(0.2)
                         if locationminarboton_img5:
                             encontradas+=1
                             center = pyautogui.center(locationminarboton_img5)
@@ -990,7 +986,6 @@ def action_for_p2(position):
                 break
             mina16=None
             mina16 = pyautogui.locateOnScreen(image_path116, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina16:
                 contador=4
                 print("Encontró punto de apoyo 5")
@@ -999,6 +994,7 @@ def action_for_p2(position):
                 del mina16
                 pyautogui.click(center1)
                 time.sleep(3.2)
+                break
                 
             else:
                 contador+=1
@@ -1029,7 +1025,6 @@ def action_for_p2(position):
                     break
                 mina17=None
                 mina17 = pyautogui.locateOnScreen(image_path117, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina17:
                     contador=4
                     encontrado=1
@@ -1037,6 +1032,7 @@ def action_for_p2(position):
                     del mina17
                     pyautogui.click(center1)
                     time.sleep(3.2)
+                    break
                 else:
                     contador+=1
                     buscando_apoyo+=1
@@ -1064,7 +1060,6 @@ def action_for_p2(position):
                     break
                 mina18=None
                 mina18 = pyautogui.locateOnScreen(image_path118, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina18:
                     contador=4
                     encontrado=1
@@ -1072,6 +1067,7 @@ def action_for_p2(position):
                     del mina18
                     pyautogui.click(center1)
                     time.sleep(3)
+                    break
                 else:
                     contador+=1
                     buscando_apoyo+=1
@@ -1096,15 +1092,14 @@ def action_for_p2(position):
                     break
                 mina19=None
                 mina19 = pyautogui.locateOnScreen(image_path119, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina19:
                     contador+=1
                     center1 = pyautogui.center(mina19)
                     del mina19
                     pyautogui.rightClick(center1)
+                    time.sleep(0.5)
                     for _, image_path280 in minarboton_img.items(): # Buscar botón minar
                         locationminarboton_img5 = pyautogui.locateOnScreen(image_path280, confidence=0.9)
-                        time.sleep(0.2)
                         if locationminarboton_img5:
                             encontradas+=1
                             center = pyautogui.center(locationminarboton_img5)
@@ -1132,9 +1127,9 @@ def action_for_p2(position):
                     center1 = pyautogui.center(mina19)
                     del mina19
                     pyautogui.rightClick(center1)
+                    time.sleep(0.5)
                     for _, image_path280 in minarboton_img.items(): # Buscar botón minar
                         locationminarboton_img5 = pyautogui.locateOnScreen(image_path280, confidence=0.9)
-                        time.sleep(0.2)
                         if locationminarboton_img5:
                             encontradas+=1
                             center = pyautogui.center(locationminarboton_img5)
@@ -1158,15 +1153,14 @@ def action_for_p2(position):
                     break
                 mina19=None
                 mina19 = pyautogui.locateOnScreen(image_path119, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina19:
                     contador+=1
                     center1 = pyautogui.center(mina19)
                     del mina19
                     pyautogui.rightClick(center1)
+                    time.sleep(0.5)
                     for _, image_path280 in minarboton_img.items(): # Buscar botón minar
                         locationminarboton_img5 = pyautogui.locateOnScreen(image_path280, confidence=0.9)
-                        time.sleep(0.2)
                         if locationminarboton_img5:
                             encontradas+=1
                             center = pyautogui.center(locationminarboton_img5)
@@ -1190,7 +1184,6 @@ def action_for_p2(position):
                 break
             mina20=None
             mina20 = pyautogui.locateOnScreen(image_path120, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina20:
                 contador=4
                 encontrado=1
@@ -1198,6 +1191,7 @@ def action_for_p2(position):
                 del mina20
                 pyautogui.click(center1)
                 time.sleep(3.2)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -1240,7 +1234,6 @@ def action_for_p2(position):
                 break
             mina21=None
             mina21 = pyautogui.locateOnScreen(image_path121, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina21:
                 contador=4
                 encontrado=1
@@ -1248,6 +1241,7 @@ def action_for_p2(position):
                 del mina21
                 pyautogui.click(center1)
                 time.sleep(3.2)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -1288,7 +1282,6 @@ def action_for_p2(position):
                 break
             mina22=None
             mina22 = pyautogui.locateOnScreen(image_path122, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina22:
                 contador=4
                 encontrado=1
@@ -1296,6 +1289,7 @@ def action_for_p2(position):
                 del mina22
                 pyautogui.click(center1)
                 time.sleep(3.2)
+                break
                 
             else:
                 contador+=1
@@ -1334,7 +1328,6 @@ def action_for_p2(position):
                 break
             mina14=None
             mina14 = pyautogui.locateOnScreen(image_path123, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina14:
                 contador=4
                 encontrado=1
@@ -1342,6 +1335,7 @@ def action_for_p2(position):
                 del mina14
                 pyautogui.click(center1)
                 time.sleep(3.1)
+                break
                 
             else:
                 contador+=1
@@ -1378,14 +1372,15 @@ def action_for_p2(position):
                 break
             mina23=None
             mina23 = pyautogui.locateOnScreen(image_path124, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina23:
                 contador=4
                 encontrado=1
                 center1 = pyautogui.center(mina23)
                 del mina23
+                center1_adjusted = (center1[0] - 15, center1[1])  # Ajustar posición en el eje X
+                pyautogui.click(center1_adjusted)
                 pyautogui.click(center1)
-                pyautogui.click(center1)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -1414,7 +1409,7 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
     pyautogui.rightClick(939, 579)
     encontradas=0
     pyautogui.moveTo(0, 0)
-    time.sleep(0.2)
+    time.sleep(0.5)
     for _, image_path228Q in minarboton_img.items(): # Buscar botón minar
         if(encontradas==4):
             break
@@ -1426,12 +1421,11 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
             time.sleep(5.6) # Tiempo que tarda en llegar y minar
             pyautogui.rightClick(943, 193)
             pyautogui.moveTo(0, 0)
-            time.sleep(0.2)
+            time.sleep(0.5)
             for _, image_path228QR in minarboton_img.items(): # Buscar botón minar
                 if(encontradas==4):
                     break
                 locationminarboton_img5QR = pyautogui.locateOnScreen(image_path228QR, confidence=0.9)
-                time.sleep(0.2)
                 if locationminarboton_img5QR:
                     encontradas+=1
                     center = pyautogui.center(locationminarboton_img5QR)
@@ -1446,12 +1440,11 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
     pyautogui.rightClick(1157, 385)
     pyautogui.moveTo(0, 0)
     encontradas=0
-    time.sleep(0.2)
+    time.sleep(0.5)
     for _, image_path228QQ in minarboton_img.items(): # Buscar botón minar
         if(encontradas==3):
             break
         locationminarboton_img5QQ = pyautogui.locateOnScreen(image_path228QQ, confidence=0.9)
-        time.sleep(0.2)
         if locationminarboton_img5QQ:
             encontradas+=1
             center = pyautogui.center(locationminarboton_img5QQ)
@@ -1477,17 +1470,15 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                 break
             minaQ=None
             minaQ = pyautogui.locateOnScreen(image_path12Q, confidence=0.9, region=abajo_region, grayscale=True)
-            time.sleep(0.2)
             if minaQ:
                 contador+=1
                 center1 = pyautogui.center(minaQ)
                 del minaQ
                 pyautogui.rightClick(center1)
                 pyautogui.moveTo(0, 0)
-                time.sleep(0.3)
+                time.sleep(0.5)
                 for _, image_path228 in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path228, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5)
@@ -1509,17 +1500,15 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                 break
             mina=None
             mina = pyautogui.locateOnScreen(image_path12, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina:
                 contador+=1
                 center1 = pyautogui.center(mina)
                 del mina
                 pyautogui.rightClick(center1)
                 pyautogui.moveTo(0, 0)
-                time.sleep(0.3)
+                time.sleep(0.5)
                 for _, image_path228 in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path228, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5)
@@ -1541,13 +1530,13 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                 break
             mina2=None
             mina2 = pyautogui.locateOnScreen(image_path13, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina2:
                 contador=4
                 center1 = pyautogui.center(mina2)
                 del mina2
                 pyautogui.click(center1)
                 time.sleep(3)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -1573,13 +1562,13 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                 break
             mina25=None
             mina25 = pyautogui.locateOnScreen(image_path14, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina25:
                 contador=4
                 center1 = pyautogui.center(mina25)
                 del mina25
                 pyautogui.click(center1)
                 time.sleep(3.7)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -1603,16 +1592,15 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                 break
             mina4R=None
             mina4R = pyautogui.locateOnScreen(image_path15R, confidence=0.9, region=abajo_region, grayscale=True)
-            time.sleep(0.2)
             if mina4R:
                 contador+=1
                 print("Antes de buscar apoyo 3 del break 397 ENTRA IF DE MINA4R")
                 center1 = pyautogui.center(mina4R)
                 del mina4R
                 pyautogui.rightClick(center1)
+                time.sleep(0.5)
                 for _, image_path277 in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path277, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5)
@@ -1633,16 +1621,15 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                 break
             mina4=None
             mina4 = pyautogui.locateOnScreen(image_path15, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina4:
                 contador+=1
                 print("Antes de buscar apoyo 3 del break 397 ENTRA IF DE MINA4")
                 center1 = pyautogui.center(mina4)
                 del mina4
                 pyautogui.rightClick(center1)
+                time.sleep(0.5)
                 for _, image_path277 in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path277, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5)
@@ -1668,7 +1655,6 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                 break
             mina111=None
             mina111 = pyautogui.locateOnScreen(image_path16, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina111:
                 contador=4
                 print("Encontró punto de apoyo 3")
@@ -1677,6 +1663,7 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                 pyautogui.click(center1)
                 time.sleep(3)
                 encontrado=1
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -1705,13 +1692,13 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                     print("break 422")
                     break
                 mina127X = pyautogui.locateOnScreen(image_path17, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina127X:
                     contador = 4
                     print("Encontró punto de apoyo 2")
                     center1 = pyautogui.center(mina127X)
                     pyautogui.click(center1)
                     time.sleep(3.2)
+                    break
                 else:
                     contador += 1
                     buscando_apoyo += 1
@@ -1738,7 +1725,6 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                     break
                 mina13=None
                 mina13 = pyautogui.locateOnScreen(image_path18, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina13:
                     contador=4
                     encontrado=1
@@ -1746,6 +1732,7 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                     del mina13
                     pyautogui.click(center1)
                     time.sleep(3.2)
+                    break
                 else:
                     contador+=1
                     buscando_apoyo+=1
@@ -1769,16 +1756,15 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                 break
             mina4W=None
             mina4W = pyautogui.locateOnScreen(image_path15W, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina4W:
                 contador+=1
                 print("Antes de buscar apoyo 3 del break 397 ENTRA IF DE MINA4")
                 center1 = pyautogui.center(mina4W)
                 del mina4W
                 pyautogui.rightClick(center1)
+                time.sleep(0.5)
                 for _, image_path277 in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path277, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5)
@@ -1802,7 +1788,6 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                 break
             mina12W=None
             mina12W = pyautogui.locateOnScreen(image_path17W, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina12W:
                 contador=4
                 print("Encontró punto de apoyo 2")
@@ -1810,6 +1795,7 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                 del mina12W
                 pyautogui.click(center1)
                 time.sleep(3.2)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -1837,7 +1823,6 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                 break
             mina13=None
             mina13 = pyautogui.locateOnScreen(image_path18, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina13:
                 contador=4
                 encontrado=1
@@ -1845,6 +1830,7 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                 del mina13
                 pyautogui.click(center1)
                 time.sleep(3.2)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -1859,7 +1845,7 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
     if(encontrado==1):
         pyautogui.rightClick(386, 208)
         pyautogui.moveTo(0, 0)
-        time.sleep(0.2)
+        time.sleep(0.5)
         for _, image_path228QB in minarboton_img.items(): # Buscar botón minar
             locationminarboton_img5QB=None
             locationminarboton_img5QB = pyautogui.locateOnScreen(image_path228QB, confidence=0.9)
@@ -1884,13 +1870,13 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                 break
             mina14=None
             mina14 = pyautogui.locateOnScreen(image_path123, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina14:
                 contador=4
                 center1 = pyautogui.center(mina14)
                 del mina14
                 pyautogui.click(center1)
                 time.sleep(3.2)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -1926,6 +1912,7 @@ def action_for_p3(position): # El 3 pasa a ser el Zobal
                 center1 = pyautogui.center(mina23)
                 del mina23
                 pyautogui.click(center1)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -1951,7 +1938,7 @@ def action_for_p4(position): # Ocra BRAKMAR
     pyautogui.rightClick(1201, 189)
     pyautogui.moveTo(0, 0)
     encontradas=0
-    time.sleep(0.2)
+    time.sleep(0.5)
     for _, image_path228QSS in minarboton_img.items(): # Buscar botón minar
         locationminarboton_img5QSS=None
         locationminarboton_img5QSS = pyautogui.locateOnScreen(image_path228QSS, confidence=0.9)
@@ -1960,14 +1947,14 @@ def action_for_p4(position): # Ocra BRAKMAR
             center = pyautogui.center(locationminarboton_img5QSS)
             del locationminarboton_img5QSS
             pyautogui.click(center)
-            time.sleep(5.8) # Tiempo que tarda en llegar y minar
+            time.sleep(6.3) # Tiempo que tarda en llegar y minar
             pyautogui.click(209, 577)
             time.sleep(3.2)
 
     pyautogui.rightClick(552, 556)
     encontradas=0
     pyautogui.moveTo(0, 0)
-    time.sleep(0.2)
+    time.sleep(0.5)
     for _, image_path228Q in minarboton_img.items(): # Buscar botón minar
         locationminarboton_img5Q=None
         locationminarboton_img5Q = pyautogui.locateOnScreen(image_path228Q, confidence=0.9)
@@ -1979,11 +1966,10 @@ def action_for_p4(position): # Ocra BRAKMAR
             time.sleep(5) # Tiempo que tarda en llegar y minar
             pyautogui.rightClick(1024, 238)
             pyautogui.moveTo(0, 0)
-            time.sleep(0.2)
+            time.sleep(0.5)
             for _, image_path228QR in minarboton_img.items(): # Buscar botón minar
                 locationminarboton_img5QR=None
                 locationminarboton_img5QR = pyautogui.locateOnScreen(image_path228QR, confidence=0.9)
-                time.sleep(0.2)
                 if locationminarboton_img5QR:
                     encontradas+=1
                     center = pyautogui.center(locationminarboton_img5QR)
@@ -1996,11 +1982,10 @@ def action_for_p4(position): # Ocra BRAKMAR
     pyautogui.rightClick(942, 407)
     pyautogui.moveTo(0, 0)
     encontradas=0
-    time.sleep(0.2)
+    time.sleep(0.5)
     for _, image_path228QQ in minarboton_img.items(): # Buscar botón minar
         locationminarboton_img5QQ=None
         locationminarboton_img5QQ = pyautogui.locateOnScreen(image_path228QQ, confidence=0.9)
-        time.sleep(0.2)
         if locationminarboton_img5QQ:
             encontradas+=1
             center = pyautogui.center(locationminarboton_img5QQ)
@@ -2030,10 +2015,9 @@ def action_for_p4(position): # Ocra BRAKMAR
                 del minaQ
                 pyautogui.rightClick(center1)
                 pyautogui.moveTo(0, 0)
-                time.sleep(0.3)
+                time.sleep(0.5)
                 for _, image_path228 in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path228, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5)
@@ -2055,17 +2039,15 @@ def action_for_p4(position): # Ocra BRAKMAR
                 break
             mina=None
             mina = pyautogui.locateOnScreen(image_path12, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina:
                 contador+=1
                 center1 = pyautogui.center(mina)
                 del mina
                 pyautogui.rightClick(center1)
                 pyautogui.moveTo(0, 0)
-                time.sleep(0.3)
+                time.sleep(0.5)
                 for _, image_path228 in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path228, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5)
@@ -2087,13 +2069,13 @@ def action_for_p4(position): # Ocra BRAKMAR
                 break
             mina2=None
             mina2 = pyautogui.locateOnScreen(image_path13, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina2:
                 contador=4
                 center1 = pyautogui.center(mina2)
                 del mina2
                 pyautogui.click(center1)
                 time.sleep(3)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -2111,13 +2093,13 @@ def action_for_p4(position): # Ocra BRAKMAR
                 break
             mina25=None
             mina25 = pyautogui.locateOnScreen(image_path14, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina25:
                 contador=4
                 center1 = pyautogui.center(mina25)
                 del mina25
                 pyautogui.click(center1)
                 time.sleep(3.7)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -2139,6 +2121,7 @@ def action_for_p4(position): # Ocra BRAKMAR
                 center1 = pyautogui.center(mina4c1)
                 del mina4c1
                 pyautogui.rightClick(center1)
+                time.sleep(0.5)
                 for _, image_path277 in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path277, confidence=0.9)
                     if locationminarboton_img5:
@@ -2167,7 +2150,6 @@ def action_for_p4(position): # Ocra BRAKMAR
                 break
             mina111=None
             mina111 = pyautogui.locateOnScreen(image_path16, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina111:
                 contador=4
                 print("Encontró punto de apoyo 3")
@@ -2177,15 +2159,16 @@ def action_for_p4(position): # Ocra BRAKMAR
                 time.sleep(3)
                 encontrado=1
                 pyautogui.rightClick(x=856,y=278)
+                time.sleep(0.5)
                 for _, image_path277c in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5c = pyautogui.locateOnScreen(image_path277c, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5c:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5c)
                         pyautogui.click(center)
                         time.sleep(4.9) # Tiempo que tarda en llegar y minar
                         pyautogui.rightClick(x=557,y=454)
+                        break
 
             else:
                 contador+=1
@@ -2203,16 +2186,15 @@ def action_for_p4(position): # Ocra BRAKMAR
                 break
             mina4D=None
             mina4D = pyautogui.locateOnScreen(image_path15D, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina4D:
                 contador+=1
                 print("Antes de buscar apoyo 3 del break 397 ENTRA IF DE MINA4D")
                 center1 = pyautogui.center(mina4D)
                 del mina4D
                 pyautogui.rightClick(center1)
+                time.sleep(0.5)
                 for _, image_path277 in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path277, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5)
@@ -2239,7 +2221,6 @@ def action_for_p4(position): # Ocra BRAKMAR
                 break
             mina111D=None
             mina111D = pyautogui.locateOnScreen(image_path16D, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina111D:
                 contador=4
                 print("Encontró punto de apoyo 3")
@@ -2249,15 +2230,16 @@ def action_for_p4(position): # Ocra BRAKMAR
                 time.sleep(3)
                 encontrado=1
                 pyautogui.rightClick(x=856,y=278)
+                time.sleep(0.5)
                 for _, image_path277c in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5c = pyautogui.locateOnScreen(image_path277c, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5c:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5c)
                         pyautogui.click(center)
                         time.sleep(4.9) # Tiempo que tarda en llegar y minar
                         pyautogui.rightClick(x=557,y=454)
+                        break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -2277,7 +2259,6 @@ def action_for_p4(position): # Ocra BRAKMAR
                     break
                 mina12=None
                 mina12 = pyautogui.locateOnScreen(image_path17, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina12:
                     contador=4
                     print("Encontró punto de apoyo 2")
@@ -2285,6 +2266,7 @@ def action_for_p4(position): # Ocra BRAKMAR
                     del mina12
                     pyautogui.click(center1)
                     time.sleep(3.2)
+                    break
                 else:
                     contador+=1
                     buscando_apoyo+=1
@@ -2303,7 +2285,6 @@ def action_for_p4(position): # Ocra BRAKMAR
                     break
                 mina13=None
                 mina13 = pyautogui.locateOnScreen(image_path18, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina13:
                     contador=4
                     encontrado=1
@@ -2312,15 +2293,16 @@ def action_for_p4(position): # Ocra BRAKMAR
                     pyautogui.click(center1)
                     time.sleep(3.2)
                     pyautogui.rightClick(x=856,y=278)
+                    time.sleep(0.5)
                     for _, image_path277c in minarboton_img.items(): # Buscar botón minar
                         locationminarboton_img5c = pyautogui.locateOnScreen(image_path277c, confidence=0.9)
-                        time.sleep(0.2)
                         if locationminarboton_img5c:
                             encontradas+=1
                             center = pyautogui.center(locationminarboton_img5c)
                             pyautogui.click(center)
                             time.sleep(4.9) # Tiempo que tarda en llegar y minar
                             pyautogui.rightClick(x=557,y=454)
+                            break
                 else:
                     contador+=1
                     buscando_apoyo+=1
@@ -2339,7 +2321,6 @@ def action_for_p4(position): # Ocra BRAKMAR
                 break
             mina14=None
             mina14 = pyautogui.locateOnScreen(image_path123, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina14:
                 contador=4
                 encontrado=1
@@ -2347,6 +2328,7 @@ def action_for_p4(position): # Ocra BRAKMAR
                 del mina14
                 pyautogui.click(center1)
                 time.sleep(2.8)
+                break
                 
             else:
                 contador+=1
@@ -2367,7 +2349,6 @@ def action_for_p4(position): # Ocra BRAKMAR
                 break
             mina23=None
             mina23 = pyautogui.locateOnScreen(image_path124, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina23:
                 contador=4
                 encontrado=1
@@ -2375,6 +2356,7 @@ def action_for_p4(position): # Ocra BRAKMAR
                 del mina23
                 pyautogui.click(center1)
                 time.sleep(0.3)
+                break
                 
             else:
                 contador+=1
@@ -2390,7 +2372,7 @@ def action_for_p5(position): # Osamoda
     pyautogui.rightClick(596, 588)
     encontradas=0
     pyautogui.moveTo(0, 0)
-    time.sleep(0.2)
+    time.sleep(0.5)
     image_path228Q=None
     for _, image_path228Q in minarboton_img.items(): # Buscar botón minar
         locationminarboton_img5Q=None
@@ -2403,12 +2385,11 @@ def action_for_p5(position): # Osamoda
             time.sleep(4.9) # Tiempo que tarda en llegar y minar
             pyautogui.rightClick(1024, 238)
             pyautogui.moveTo(0, 0)
-            time.sleep(0.2)
+            time.sleep(0.5)
             image_path228QR=None
             for _, image_path228QR in minarboton_img.items(): # Buscar botón minar
                 locationminarboton_img5QR=None
                 locationminarboton_img5QR = pyautogui.locateOnScreen(image_path228QR, confidence=0.9)
-                time.sleep(0.2)
                 if locationminarboton_img5QR:
                     encontradas+=1
                     center = pyautogui.center(locationminarboton_img5QR)
@@ -2420,11 +2401,10 @@ def action_for_p5(position): # Osamoda
     pyautogui.rightClick(1069, 177)
     pyautogui.moveTo(0, 0)
     encontradas=0
-    time.sleep(0.2)
+    time.sleep(0.5)
     for _, image_path228QQ in minarboton_img.items(): # Buscar botón minar
         locationminarboton_img5QQ=None
         locationminarboton_img5QQ = pyautogui.locateOnScreen(image_path228QQ, confidence=0.9)
-        time.sleep(0.2)
         if locationminarboton_img5QQ:
             encontradas+=1
             center = pyautogui.center(locationminarboton_img5QQ)
@@ -2444,15 +2424,14 @@ def action_for_p5(position): # Osamoda
                 break
             minaQ=None
             minaQ = pyautogui.locateOnScreen(image_path12Q, confidence=0.9, region=abajo_region, grayscale=True)
-            time.sleep(0.2)
             if minaQ:
                 contador+=1
                 center1 = pyautogui.center(minaQ)
                 del minaQ
                 pyautogui.rightClick(center1)
+                time.sleep(0.5)
                 for _, image_path228Q in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path228Q, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5)
@@ -2472,15 +2451,14 @@ def action_for_p5(position): # Osamoda
                 break
             mina=None
             mina = pyautogui.locateOnScreen(image_path12, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina:
                 contador+=1
                 center1 = pyautogui.center(mina)
                 del mina
                 pyautogui.rightClick(center1)
+                time.sleep(0.5)
                 for _, image_path228 in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path228, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5)
@@ -2502,7 +2480,6 @@ def action_for_p5(position): # Osamoda
                 break
             mina2c=None
             mina2c = pyautogui.locateOnScreen(image_path13, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina2c:
                 contador=4
                 center1 = pyautogui.center(mina2c)
@@ -2511,10 +2488,9 @@ def action_for_p5(position): # Osamoda
                 time.sleep(3.2)
                 pyautogui.rightClick(732, 254)
                 pyautogui.moveTo(0, 0)
-                time.sleep(0.2)
+                time.sleep(0.5)
                 for _, image_path228c in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5c = pyautogui.locateOnScreen(image_path228c, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5c:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5c)
@@ -2522,10 +2498,9 @@ def action_for_p5(position): # Osamoda
                         time.sleep(4.5) # Tiempo que tarda en llegar y minar
                         pyautogui.rightClick(1025, 455)
                         pyautogui.moveTo(0, 0)
-                        time.sleep(0.2)
+                        time.sleep(0.5)
                         for _, image_path228cc in minarboton_img.items(): # Buscar botón minar
                             locationminarboton_img5cc = pyautogui.locateOnScreen(image_path228cc, confidence=0.9)
-                            time.sleep(0.2)
                             if locationminarboton_img5cc:
                                 encontradas+=1
                                 center = pyautogui.center(locationminarboton_img5cc)
@@ -2533,6 +2508,7 @@ def action_for_p5(position): # Osamoda
                                 time.sleep(4.8) # Tiempo que tarda en llegar y minar
                                 pyautogui.click(383, 411)
                                 time.sleep(1)
+                                break
                             else:
                                 pyautogui.click(678, 476)
                                 time.sleep(1)
@@ -2553,13 +2529,13 @@ def action_for_p5(position): # Osamoda
                 break
             mina25=None
             mina25 = pyautogui.locateOnScreen(image_path14, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina25:
                 contador=4
                 center1 = pyautogui.center(mina25)
                 del mina25
                 pyautogui.click(center1)
                 time.sleep(3.2)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -2575,16 +2551,15 @@ def action_for_p5(position): # Osamoda
                 break
             mina4=None
             mina4 = pyautogui.locateOnScreen(image_path15, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina4:
                 contador+=1
                 print("Antes de buscar apoyo 3 del break 397 ENTRA IF DE MINA4")
                 center1 = pyautogui.center(mina4)
                 del mina4
                 pyautogui.rightClick(center1)
+                time.sleep(0.5)
                 for _, image_path277 in minarboton_img.items(): # Buscar botón minar
                     locationminarboton_img5 = pyautogui.locateOnScreen(image_path277, confidence=0.9)
-                    time.sleep(0.2)
                     if locationminarboton_img5:
                         encontradas+=1
                         center = pyautogui.center(locationminarboton_img5)
@@ -2610,7 +2585,6 @@ def action_for_p5(position): # Osamoda
                 break
             mina111=None
             mina111 = pyautogui.locateOnScreen(image_path16, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina111:
                 contador=4
                 print("Encontró punto de apoyo 3")
@@ -2621,28 +2595,27 @@ def action_for_p5(position): # Osamoda
                 encontrado=1
                 pyautogui.rightClick(511, 464)
                 pyautogui.moveTo(0, 0)
-                time.sleep(0.1)
-                for _, image_path19c in img_p5_temporal.items(): # Buscar filón
+                time.sleep(0.5)
+                for _, image_path19c in minarboton_img.items(): # Buscar boton minar
                     mina5c=None
-                    mina5c = pyautogui.locateOnScreen(image_path19c, confidence=0.9, grayscale=True)
-                    time.sleep(0.2)
+                    mina5c = pyautogui.locateOnScreen(image_path19c, confidence=0.9)
                     if mina5c:
                         center1 = pyautogui.center(mina5c)
                         del mina5c
-                        pyautogui.rightClick(center1)
-                        time.sleep(4.3)
+                        pyautogui.click(center1)
+                        time.sleep(4.5)
                         pyautogui.rightClick(428, 406)
                         pyautogui.moveTo(0, 0)
-                        time.sleep(0.1)
-                        for _, image_path19cc in img_p5_temporal.items(): # Buscar filón
+                        time.sleep(0.5)
+                        for _, image_path19cc in minarboton_img.items(): # Buscar boton minar
                             mina5cc=None
-                            mina5cc = pyautogui.locateOnScreen(image_path19cc, confidence=0.9, grayscale=True)
-                            time.sleep(0.2)
+                            mina5cc = pyautogui.locateOnScreen(image_path19cc, confidence=0.9)
                             if mina5cc:
                                 center1 = pyautogui.center(mina5cc)
                                 del mina5cc
-                                pyautogui.rightClick(center1)
-                                time.sleep(4.4)
+                                pyautogui.click(center1)
+                                time.sleep(4.5)
+                                break
             else:
                 contador+=1
                 print("NO Encontró punto de apoyo 3")
@@ -2663,7 +2636,6 @@ def action_for_p5(position): # Osamoda
                     break
                 mina12=None
                 mina12 = pyautogui.locateOnScreen(image_path17, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina12:
                     contador=4
                     print("Encontró punto de apoyo 2")
@@ -2671,6 +2643,7 @@ def action_for_p5(position): # Osamoda
                     del mina12
                     pyautogui.click(center1)
                     time.sleep(3.2)
+                    break
                 else:
                     contador+=1
                     print("NO Encontró punto de apoyo 2")
@@ -2689,7 +2662,6 @@ def action_for_p5(position): # Osamoda
                     break
                 mina13=None
                 mina13 = pyautogui.locateOnScreen(image_path18, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina13:
                     contador=4
                     encontrado=1
@@ -2697,6 +2669,7 @@ def action_for_p5(position): # Osamoda
                     del mina13
                     pyautogui.click(center1)
                     time.sleep(2.8)
+                    break
                 else:
                     contador+=1
                     buscando_apoyo+=1
@@ -2713,15 +2686,14 @@ def action_for_p5(position): # Osamoda
                     break
                 mina5=None
                 mina5 = pyautogui.locateOnScreen(image_path19, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina5:
                     contador+=1
                     center1 = pyautogui.center(mina5)
                     del mina5
                     pyautogui.rightClick(center1)
+                    time.sleep(0.5)
                     for _, image_path278 in minarboton_img.items(): # Buscar botón minar
                         locationminarboton_img5 = pyautogui.locateOnScreen(image_path278, confidence=0.9)
-                        time.sleep(0.2)
                         if locationminarboton_img5:
                             encontradas+=1
                             center = pyautogui.center(locationminarboton_img5)
@@ -2746,7 +2718,6 @@ def action_for_p5(position): # Osamoda
                 break
             mina8=None
             mina8 = pyautogui.locateOnScreen(image_path112, confidence=0.9, grayscale=True)
-            time.sleep(0.2)
             if mina8:
                 contador=4
                 print("Encontró punto de apoyo 4")
@@ -2755,6 +2726,7 @@ def action_for_p5(position): # Osamoda
                 del mina8
                 pyautogui.click(center1)
                 time.sleep(3.2)
+                break
             else:
                 contador+=1
                 print("NO Encontró punto de apoyo 4")
@@ -2776,7 +2748,6 @@ def action_for_p5(position): # Osamoda
                     break
                 mina6=None
                 mina6 = pyautogui.locateOnScreen(image_path113, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina6:
                     contador=4
                     encontrado=1
@@ -2784,6 +2755,7 @@ def action_for_p5(position): # Osamoda
                     del mina6
                     pyautogui.click(center1)
                     time.sleep(3.2)
+                    break
                 else:
                     contador+=1
                     buscando_apoyo+=1
@@ -2803,7 +2775,6 @@ def action_for_p5(position): # Osamoda
                     break
                 mina15=None
                 mina15 = pyautogui.locateOnScreen(image_path114, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina15:
                     contador=4
                     encontrado=1
@@ -2811,6 +2782,7 @@ def action_for_p5(position): # Osamoda
                     del mina15
                     pyautogui.click(center1)
                     time.sleep(3.2)
+                    break
                 else:
                     contador+=1
                     buscando_apoyo+=1
@@ -2827,15 +2799,14 @@ def action_for_p5(position): # Osamoda
                     break
                 mina9QQ=None
                 mina9QQ = pyautogui.locateOnScreen(image_path115QQ, confidence=0.9, region=abajo_region, grayscale=True)
-                time.sleep(0.2)
                 if mina9QQ:
                     contador+=1
                     center1 = pyautogui.center(mina9QQ)
                     del mina9QQ
                     pyautogui.rightClick(center1)
+                    time.sleep(0.5)
                     for _, image_path279 in minarboton_img.items(): # Buscar botón minar
                         locationminarboton_img5 = pyautogui.locateOnScreen(image_path279, confidence=0.9)
-                        time.sleep(0.2)
                         if locationminarboton_img5:
                             encontradas+=1
                             center = pyautogui.center(locationminarboton_img5)
@@ -2856,15 +2827,14 @@ def action_for_p5(position): # Osamoda
                     break
                 mina9=None
                 mina9 = pyautogui.locateOnScreen(image_path115, confidence=0.9, grayscale=True)
-                time.sleep(0.2)
                 if mina9:
                     contador+=1
                     center1 = pyautogui.center(mina9)
                     del mina9
                     pyautogui.rightClick(center1)
+                    time.sleep(0.5)
                     for _, image_path279 in minarboton_img.items(): # Buscar botón minar
                         locationminarboton_img5 = pyautogui.locateOnScreen(image_path279, confidence=0.9)
-                        time.sleep(0.2)
                         if locationminarboton_img5:
                             encontradas+=1
                             center = pyautogui.center(locationminarboton_img5)
@@ -2888,7 +2858,6 @@ def action_for_p5(position): # Osamoda
                 break
             mina21=None
             mina21 = pyautogui.locateOnScreen(image_path121, confidence=0.85, grayscale=True)
-            time.sleep(0.2)
             if mina21:
                 contador=4
                 encontrado=1
@@ -2896,15 +2865,15 @@ def action_for_p5(position): # Osamoda
                 del mina21
                 pyautogui.click(center1)
                 time.sleep(3.2)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
     pyautogui.rightClick(x=731,y=207)
     pyautogui.moveTo(0, 0)
-    time.sleep(0.2)
+    time.sleep(0.5)
     for _, image_path279FF in minarboton_img.items(): # Buscar botón minar
         locationminarboton_img5FF = pyautogui.locateOnScreen(image_path279FF, confidence=0.9)
-        time.sleep(0.2)
         if locationminarboton_img5FF:
             encontradas+=1
             center = pyautogui.center(locationminarboton_img5FF)
@@ -2914,10 +2883,9 @@ def action_for_p5(position): # Osamoda
             time.sleep(2)
     pyautogui.rightClick(x=735,y=598)
     pyautogui.moveTo(0, 0)
-    time.sleep(0.2)
+    time.sleep(0.5)
     for _, image_path279FF1 in minarboton_img.items(): # Buscar botón minar
         locationminarboton_img5FF1 = pyautogui.locateOnScreen(image_path279FF1, confidence=0.9)
-        time.sleep(0.2)
         if locationminarboton_img5FF1:
             encontradas+=1
             center = pyautogui.center(locationminarboton_img5FF1)
@@ -2940,7 +2908,6 @@ def action_for_p5(position): # Osamoda
                 break
             mina22=None
             mina22 = pyautogui.locateOnScreen(image_path122, confidence=0.85, grayscale=True)
-            time.sleep(0.2)
             if mina22:
                 contador=4
                 encontrado=1
@@ -2948,6 +2915,7 @@ def action_for_p5(position): # Osamoda
                 del mina22
                 pyautogui.click(center1)
                 time.sleep(3.2)
+                break
                 
             else:
                 contador+=1
@@ -2967,7 +2935,6 @@ def action_for_p5(position): # Osamoda
                 break
             mina14=None
             mina14 = pyautogui.locateOnScreen(image_path123, confidence=0.85, grayscale=True)
-            time.sleep(0.2)
             if mina14:
                 contador=4
                 encontrado=1
@@ -2975,6 +2942,7 @@ def action_for_p5(position): # Osamoda
                 del mina14
                 pyautogui.click(center1)
                 time.sleep(3.1)
+                break
                 
             else:
                 contador+=1
@@ -2995,7 +2963,6 @@ def action_for_p5(position): # Osamoda
                 break
             mina23=None
             mina23 = pyautogui.locateOnScreen(image_path124, confidence=0.85, grayscale=True)
-            time.sleep(0.2)
             if mina23:
                 contador=4
                 encontrado=1
@@ -3003,6 +2970,7 @@ def action_for_p5(position): # Osamoda
                 del mina23
                 pyautogui.click(center1)
                 time.sleep(0.3)
+                break
             else:
                 contador+=1
                 buscando_apoyo+=1
