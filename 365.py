@@ -2097,14 +2097,6 @@ def action_for_p4(position): # Ocra BRAKMAR
             else:
                 contador+=1
                 buscando_apoyo+=1
-                if(buscando_apoyo==2):
-                    pyautogui.click(x=900,y=487) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                    time.sleep(2)
-                if(buscando_apoyo==3):
-                    pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(1.7)
-                    pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
     encontradas=0
     buscando_apoyo=0
     contador=0
@@ -2129,14 +2121,6 @@ def action_for_p4(position): # Ocra BRAKMAR
             else:
                 contador+=1
                 buscando_apoyo+=1
-                if(buscando_apoyo==2):
-                    pyautogui.click(x=900,y=487) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                    time.sleep(2)
-                if(buscando_apoyo==3):
-                    pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(1.7)
-                    pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
     contador=0
     encontradas=0
     while contador<=20 and encontradas<=5:
@@ -2203,21 +2187,9 @@ def action_for_p4(position): # Ocra BRAKMAR
                         time.sleep(4.9) # Tiempo que tarda en llegar y minar
                         pyautogui.rightClick(x=557,y=454)
 
-
-
-
-
             else:
                 contador+=1
                 buscando_apoyo+=1
-                if(buscando_apoyo==2):
-                    pyautogui.click(x=900,y=487) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                    time.sleep(2)
-                if(buscando_apoyo==3):
-                    pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(1.7)
-                    pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
 
     contador=0
     encontradas=0
@@ -2289,14 +2261,6 @@ def action_for_p4(position): # Ocra BRAKMAR
             else:
                 contador+=1
                 buscando_apoyo+=1
-                if(buscando_apoyo==2):
-                    pyautogui.click(x=900,y=487) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                    time.sleep(2)
-                if(buscando_apoyo==3):
-                    pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(1.7)
-                    pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
 
     encontradas=0
     buscando_apoyo=0
@@ -2324,14 +2288,6 @@ def action_for_p4(position): # Ocra BRAKMAR
                 else:
                     contador+=1
                     buscando_apoyo+=1
-                    if(buscando_apoyo==2):
-                        pyautogui.click(x=515,y=465) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                        time.sleep(2)
-                    if(buscando_apoyo==3):
-                        pyautogui.click(x=515,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                        time.sleep(1.7)
-                        pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                        time.sleep(2)
         contador=0
         encontradas=0
         buscando_apoyo=0
@@ -2368,14 +2324,6 @@ def action_for_p4(position): # Ocra BRAKMAR
                 else:
                     contador+=1
                     buscando_apoyo+=1
-                    if(buscando_apoyo==2):
-                        pyautogui.click(x=900,y=487) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                        time.sleep(2)
-                    if(buscando_apoyo==3):
-                        pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                        time.sleep(1.7)
-                        pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                        time.sleep(2)
     contador=0
     encontradas=0
     buscando_apoyo=0
@@ -2403,17 +2351,6 @@ def action_for_p4(position): # Ocra BRAKMAR
             else:
                 contador+=1
                 buscando_apoyo+=1
-                if(buscando_apoyo==2):
-                    pyautogui.click(x=900,y=487) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                    time.sleep(2)
-                if(buscando_apoyo==3):
-                    pyautogui.click(x=472,y=486) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(1.7)
-                    pyautogui.click(x=472,y=486) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
-                if(buscando_apoyo==4):
-                    pyautogui.click(x=814,y=444)
-                    time.sleep(1.4)
     contador=0
     encontradas=0
     buscando_apoyo=0
@@ -2442,17 +2379,6 @@ def action_for_p4(position): # Ocra BRAKMAR
             else:
                 contador+=1
                 buscando_apoyo+=1
-                if(buscando_apoyo==2):
-                    pyautogui.click(x=900,y=487) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                    time.sleep(2)
-                if(buscando_apoyo==3):
-                    pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(1.7)
-                    pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
-                if(buscando_apoyo==4):
-                    pyautogui.click(x=814,y=444)
-                    time.sleep(1.4)
 
     if(encontrado!=1):
         print("Algo salió mal. No volvió al punto de inicio PUNTO DE APOYO 1")
@@ -2613,19 +2539,6 @@ def action_for_p5(position): # Osamoda
             else:
                 contador+=1
                 buscando_apoyo+=1
-                if(buscando_apoyo==2):
-                    pyautogui.click(x=515,y=296) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                    time.sleep(2)
-                if(buscando_apoyo==3):
-                    pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
-                    pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
-                if(buscando_apoyo==4):
-                    pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
-                    pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
     encontradas=0
     buscando_apoyo=0
     contador=0
@@ -2650,19 +2563,6 @@ def action_for_p5(position): # Osamoda
             else:
                 contador+=1
                 buscando_apoyo+=1
-                if(buscando_apoyo==2):
-                    pyautogui.click(x=515,y=296) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                    time.sleep(2)
-                if(buscando_apoyo==3):
-                    pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
-                    pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
-                if(buscando_apoyo==4):
-                    pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
-                    pyautogui.click(x=472,y=274) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
     contador=0
     encontradas=0
     while contador<=20 and encontradas<=5:
@@ -2747,14 +2647,6 @@ def action_for_p5(position): # Osamoda
                 contador+=1
                 print("NO Encontró punto de apoyo 3")
                 buscando_apoyo+=1
-                if(buscando_apoyo==2):
-                    pyautogui.click(x=515,y=296) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                    time.sleep(2)
-                if(buscando_apoyo==3):
-                    pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
-                    pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
 
     encontradas=0
     buscando_apoyo=0
@@ -2783,14 +2675,6 @@ def action_for_p5(position): # Osamoda
                     contador+=1
                     print("NO Encontró punto de apoyo 2")
                     buscando_apoyo+=1
-                    if(buscando_apoyo==2):
-                        pyautogui.click(x=515,y=296) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                        time.sleep(2)
-                    if(buscando_apoyo==3):
-                        pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                        time.sleep(2)
-                        pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                        time.sleep(2)
         contador=0
         encontradas=0
         buscando_apoyo=0
@@ -2816,14 +2700,6 @@ def action_for_p5(position): # Osamoda
                 else:
                     contador+=1
                     buscando_apoyo+=1
-                    if(buscando_apoyo==2):
-                        pyautogui.click(x=515,y=296) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                        time.sleep(2)
-                    if(buscando_apoyo==3):
-                        pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                        time.sleep(2)
-                        pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                        time.sleep(2)
     if(encontrado==1):
         contador=0
         encontradas=0
@@ -2883,14 +2759,6 @@ def action_for_p5(position): # Osamoda
                 contador+=1
                 print("NO Encontró punto de apoyo 4")
                 buscando_apoyo+=1
-                if(buscando_apoyo==2):
-                    pyautogui.click(x=515,y=296) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                    time.sleep(2)
-                if(buscando_apoyo==3):
-                    pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
-                    pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(2)
     if(encontrado!=1):
         contador=0
         encontradas=0
@@ -2919,14 +2787,6 @@ def action_for_p5(position): # Osamoda
                 else:
                     contador+=1
                     buscando_apoyo+=1
-                    if(buscando_apoyo==2):
-                        pyautogui.click(x=515,y=296) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                        time.sleep(2)
-                    if(buscando_apoyo==3):
-                        pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                        time.sleep(2)
-                        pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                        time.sleep(2)
         contador=0
         encontradas=0
         buscando_apoyo=0
@@ -2954,14 +2814,6 @@ def action_for_p5(position): # Osamoda
                 else:
                     contador+=1
                     buscando_apoyo+=1
-                    if(buscando_apoyo==2):
-                        pyautogui.click(x=515,y=296) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                        time.sleep(2)
-                    if(buscando_apoyo==3):
-                        pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                        time.sleep(2)
-                        pyautogui.click(x=857,y=465) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                        time.sleep(2)
     if(encontrado==1):
         contador=0
         encontradas=0
@@ -3047,15 +2899,6 @@ def action_for_p5(position): # Osamoda
             else:
                 contador+=1
                 buscando_apoyo+=1
-                if(buscando_apoyo==2):
-                    pyautogui.click(x=769,y=477) # Moverse para intentar buscar punto apoyo 4 abajo izq
-                    time.sleep(2.5)
-                if(buscando_apoyo==3):
-                    pyautogui.click(x=769,y=477) # Moverse para intentar buscar punto apoyo 4 arriba derecha
-                    time.sleep(2.5)
-                if(buscando_apoyo==4):
-                    pyautogui.click(x=769,y=477)
-                    time.sleep(2.5)
     pyautogui.rightClick(x=731,y=207)
     pyautogui.moveTo(0, 0)
     time.sleep(0.2)
@@ -3109,15 +2952,6 @@ def action_for_p5(position): # Osamoda
             else:
                 contador+=1
                 buscando_apoyo+=1
-                if(buscando_apoyo==2):
-                    pyautogui.click(x=769,y=477) # Moverse para intentar buscar punto apoyo 3 abajo izq
-                    time.sleep(2)
-                if(buscando_apoyo==3):
-                    pyautogui.click(x=769,y=477) # Moverse para intentar buscar punto apoyo 3 arriba derecha
-                    time.sleep(1.7)
-                if(buscando_apoyo==4):
-                    pyautogui.click(x=769,y=477)
-                    time.sleep(1.4)
     contador=0
     encontradas=0
     buscando_apoyo=0
@@ -3145,15 +2979,6 @@ def action_for_p5(position): # Osamoda
             else:
                 contador+=1
                 buscando_apoyo+=1
-                if(buscando_apoyo==2):
-                    pyautogui.click(x=769,y=477) # Moverse para intentar buscar punto apoyo 2 abajo izq
-                    time.sleep(2)
-                if(buscando_apoyo==3):
-                    pyautogui.click(x=769,y=477) # Moverse para intentar buscar punto apoyo 2 arriba derecha
-                    time.sleep(1.7)
-                if(buscando_apoyo==4):
-                    pyautogui.click(x=769,y=477)
-                    time.sleep(1.4)
     contador=0
     encontradas=0
     buscando_apoyo=0
@@ -3181,15 +3006,6 @@ def action_for_p5(position): # Osamoda
             else:
                 contador+=1
                 buscando_apoyo+=1
-                if(buscando_apoyo==2):
-                    pyautogui.click(x=769,y=477) # Moverse para intentar buscar punto apoyo 1 abajo izq
-                    time.sleep(1.9)
-                if(buscando_apoyo==3):
-                    pyautogui.click(x=769,y=477) # Moverse para intentar buscar punto apoyo 1 arriba derecha
-                    time.sleep(1.7)
-                if(buscando_apoyo==4):
-                    pyautogui.click(x=769,y=477)
-                    time.sleep(1.3)
 
     if(encontrado!=1):
         print("Algo salió mal. No volvió al punto de inicio PUNTO DE APOYO 1")
