@@ -20,6 +20,7 @@ img_unica = { # imagen unica punto apoyo p1
 
 apoyo_p2_1= { # apoyo p2
     "img_apoyo_p2_1": os.path.join("imgs_programa","img_apoyo_p2_1.png"),
+    "img_apoyo_p2_11": os.path.join("imgs_programa","img_apoyo_p2_11.png"),
 }
 apoyo_p2_2= { # apoyo p2
     "img_apoyo_p2_2": os.path.join("imgs_programa","img_apoyo_p2_2.png"),
@@ -46,25 +47,40 @@ apoyo_p3_3= { # apoyo p3
 
 apoyo_p4_1= { # apoyo p4
     "img_apoyo_p4_1": os.path.join("imgs_programa","img_apoyo_p4_1.png"),
+    "img_apoyo_p4_11": os.path.join("imgs_programa","img_apoyo_p4_11.png"),
 }
 apoyo_p4_2= { # apoyo p4
     "img_apoyo_p4_2": os.path.join("imgs_programa","img_apoyo_p4_2.png"),
+    "img_apoyo_p4_x": os.path.join("imgs_programa","img_apoyo_p4_x.png"),
 }
 apoyo_p4_3= { # apoyo p4
     "img_apoyo_p4_3": os.path.join("imgs_programa","img_apoyo_p4_3.png"),
+    "img_apoyo_p4_33": os.path.join("imgs_programa","img_apoyo_p4_33.png"),
+    "img_apoyo_p4_333": os.path.join("imgs_programa","img_apoyo_p4_333.png"),
+    "img_apoyo_p4_3333": os.path.join("imgs_programa","img_apoyo_p4_3333.png"),
 }
 
 apoyo_p5_1= { # apoyo p5
     "img_apoyo_p5_1": os.path.join("imgs_programa","img_apoyo_p5_1.png"),
+    "img_apoyo_p5_11": os.path.join("imgs_programa","img_apoyo_p5_11.png"),
+    "img_apoyo_p5_111": os.path.join("imgs_programa","img_apoyo_p5_111.png"),
 }
 apoyo_p5_2= { # apoyo p5
     "img_apoyo_p5_2": os.path.join("imgs_programa","img_apoyo_p5_2.png"),
+    "img_apoyo_p5_22": os.path.join("imgs_programa","img_apoyo_p5_22.png"),
+    "img_apoyo_p5_222": os.path.join("imgs_programa","img_apoyo_p5_222.png"),
 }
 apoyo_p5_3= { # apoyo p5
     "img_apoyo_p5_3": os.path.join("imgs_programa","img_apoyo_p5_3.png"),
+    "img_apoyo_p5_33": os.path.join("imgs_programa","img_apoyo_p5_33.png"),
+    "img_apoyo_p5_333": os.path.join("imgs_programa","img_apoyo_p5_333.png"),
+    "img_apoyo_p5_3333": os.path.join("imgs_programa","img_apoyo_p5_3333.png"),
 }
 apoyo_p5_4= { # apoyo p5
     "img_apoyo_p5_4": os.path.join("imgs_programa","img_apoyo_p5_4.png"),
+    "img_apoyo_p5_44": os.path.join("imgs_programa","img_apoyo_p5_44.png"),
+    "img_apoyo_p5_33": os.path.join("imgs_programa","img_apoyo_p5_33.png"), # Comparte algunas con el 3, no hay problema
+    "img_apoyo_p5_333": os.path.join("imgs_programa","img_apoyo_p5_333.png"),
 }
 
 img_p1_temporal = { # imagen p1 temporales Sacro
@@ -161,6 +177,7 @@ deslogeo_carga_img={
 minarboton_img={ # Botón minar
     "minar1": os.path.join("imgs_programa", "minar1.png"),
     "minar2": os.path.join("imgs_programa", "minar2.png"),
+    "minar3": os.path.join("imgs_programa", "minar3.png"),
 }
 
 print("------------------------INICIO-------------------------------------------------------")
@@ -263,7 +280,12 @@ def deslogeo():
 
         # Incrementa el contador de procesos
         process_counter += 1
-    time.sleep(3)
+    time.sleep(1.8)
+    pyautogui.moveTo(366, 508)
+    # Desplazar el mouse hacia arriba 10 "clics"
+    pyautogui.scroll(180)
+    time.sleep(1.5)
+    pyautogui.scroll(180)
     pass
 def logeo(position):
     max_attempts = 4 # Máximo de veces que busca la imagen
@@ -510,8 +532,8 @@ def action_for_p2(position):
                     center = pyautogui.center(locationminarboton_img5QR)
                     del locationminarboton_img5QR
                     pyautogui.click(center)
-                    time.sleep(6.3) # Tiempo que tarda en llegar y minar
-                    pyautogui.click(205, 283)
+                    time.sleep(7) # Tiempo que tarda en llegar y minar
+                    pyautogui.click(1158, 458)
 
     pyautogui.rightClick(166, 277)
     pyautogui.moveTo(0, 0)
@@ -1351,7 +1373,6 @@ def action_for_p2(position):
         pyautogui.moveTo(0, 0)
         time.sleep(0.3)
         for _, image_path124 in apoyo_p2_1.items(): # Buscar punto apoyo 1
-            
             if buscando_apoyo>=5:
                 print("break 805")
                 break
@@ -1364,7 +1385,7 @@ def action_for_p2(position):
                 center1 = pyautogui.center(mina23)
                 del mina23
                 pyautogui.click(center1)
-                time.sleep(0.3)
+                pyautogui.click(center1)
             else:
                 contador+=1
                 buscando_apoyo+=1
@@ -1939,7 +1960,7 @@ def action_for_p4(position): # Ocra BRAKMAR
             center = pyautogui.center(locationminarboton_img5QSS)
             del locationminarboton_img5QSS
             pyautogui.click(center)
-            time.sleep(5.3) # Tiempo que tarda en llegar y minar
+            time.sleep(5.8) # Tiempo que tarda en llegar y minar
             pyautogui.click(209, 577)
             time.sleep(3.2)
 
@@ -1955,7 +1976,7 @@ def action_for_p4(position): # Ocra BRAKMAR
             center = pyautogui.center(locationminarboton_img5Q)
             del locationminarboton_img5Q
             pyautogui.click(center)
-            time.sleep(4.4) # Tiempo que tarda en llegar y minar
+            time.sleep(5) # Tiempo que tarda en llegar y minar
             pyautogui.rightClick(1024, 238)
             pyautogui.moveTo(0, 0)
             time.sleep(0.2)
@@ -1968,7 +1989,7 @@ def action_for_p4(position): # Ocra BRAKMAR
                     center = pyautogui.center(locationminarboton_img5QR)
                     del locationminarboton_img5QR
                     pyautogui.click(center)
-                    time.sleep(6.3) # Tiempo que tarda en llegar y minar
+                    time.sleep(6) # Tiempo que tarda en llegar y minar
                     pyautogui.click(205, 283)
                     time.sleep(2.5)
 
@@ -2146,17 +2167,18 @@ def action_for_p4(position): # Ocra BRAKMAR
                 print("Antes de buscar apoyo 3 del break 397 ELSEEEE")
 
     print("Antes de buscar apoyo 3 del break 397")
-    encontradas=0
     buscando_apoyo=0
     encontrado=0
     contador=0
     while contador<=3:
         if buscando_apoyo>=5:
             break
+        if encontrado==1:
+            break
         pyautogui.moveTo(0, 0)
         time.sleep(0.3)
         for _, image_path16 in apoyo_p4_3.items(): # Buscar punto apoyo 3
-            if buscando_apoyo>=5:
+            if buscando_apoyo>=5 or encontrado==1:
                 print("break 397")
                 break
             mina111=None
@@ -2235,10 +2257,12 @@ def action_for_p4(position): # Ocra BRAKMAR
     while contador<=3:
         if buscando_apoyo>=5:
             break
+        if encontrado==1:
+            break
         pyautogui.moveTo(0, 0)
         time.sleep(0.3)
         for _, image_path16D in apoyo_p4_3.items(): # Buscar punto apoyo 3
-            if buscando_apoyo>=5:
+            if buscando_apoyo>=5 or encontrado==1:
                 print("break 397")
                 break
             mina111D=None
@@ -2311,13 +2335,14 @@ def action_for_p4(position): # Ocra BRAKMAR
         contador=0
         encontradas=0
         buscando_apoyo=0
+        encontrado==0
         while contador<=3:
-            if buscando_apoyo>=5:
+            if buscando_apoyo>=5 or encontrado==1:
                 break
             pyautogui.moveTo(0, 0)
             time.sleep(0.3)
             for _, image_path18 in apoyo_p4_3.items(): # Buscar punto apoyo 3
-                if buscando_apoyo>=5:
+                if buscando_apoyo>=5 or encontrado==1:
                     print("break 445")
                     break
                 mina13=None
@@ -2356,12 +2381,12 @@ def action_for_p4(position): # Ocra BRAKMAR
     buscando_apoyo=0
     encontrado=0
     while contador<=3:
-        if buscando_apoyo>=5:
+        if buscando_apoyo>=5 or encontrado==1:
             break
         pyautogui.moveTo(0, 0)
         time.sleep(0.3)
         for _, image_path123 in apoyo_p4_2.items(): # Buscar punto apoyo 2
-            if buscando_apoyo>=5:
+            if buscando_apoyo>=5 or encontrado==1:
                 print("break 778")
                 break
             mina14=None
@@ -2394,13 +2419,13 @@ def action_for_p4(position): # Ocra BRAKMAR
     buscando_apoyo=0
     encontrado=0
     while contador<=3:
-        if buscando_apoyo>=5:
+        if buscando_apoyo>=5 or encontrado==1:
             break
         pyautogui.moveTo(0, 0)
         time.sleep(0.3)
         for _, image_path124 in apoyo_p4_1.items(): # Buscar punto apoyo 1
             
-            if buscando_apoyo>=5:
+            if buscando_apoyo>=5 or encontrado==1:
                 print("break 805")
                 break
             mina23=None
@@ -2436,7 +2461,7 @@ def action_for_p4(position): # Ocra BRAKMAR
 #P55555555555555555555555555555555555555555555555555555555555555555555555555555555555555
 def action_for_p5(position): # Osamoda
     logeo(position)
-    pyautogui.rightClick(601, 557)
+    pyautogui.rightClick(596, 588)
     encontradas=0
     pyautogui.moveTo(0, 0)
     time.sleep(0.2)
@@ -3173,7 +3198,34 @@ def action_for_p5(position): # Osamoda
 #P6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
 def action_for_p6(position):
     logeo(position)
-    
+    contador=0
+    encontradas=0
+    while contador<=20 and encontradas<=6:
+        if contador>=20 or encontradas>=6:
+            print("break 306")
+            break
+        for _, image_path12Q in img_p5_temporal.items(): # Buscar filón
+            if contador>=20 or encontradas>=5:
+                print("break 310")
+                break
+            minaQ=None
+            minaQ = pyautogui.locateOnScreen(image_path12Q, confidence=0.9, region=abajo_region, grayscale=True)
+            time.sleep(0.2)
+            if minaQ:
+                contador+=1
+                center1 = pyautogui.center(minaQ)
+                del minaQ
+                pyautogui.rightClick(center1)
+                for _, image_path228Q in minarboton_img.items(): # Buscar botón minar
+                    locationminarboton_img5 = pyautogui.locateOnScreen(image_path228Q, confidence=0.9)
+                    time.sleep(0.2)
+                    if locationminarboton_img5:
+                        encontradas+=1
+                        center = pyautogui.center(locationminarboton_img5)
+                        pyautogui.click(center)
+                        time.sleep(6.2) # Tiempo que tarda en llegar y minar
+            else:
+                contador+=1
     deslogeo()
     pass
 
