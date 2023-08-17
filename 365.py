@@ -72,15 +72,12 @@ apoyo_p5_2= { # apoyo p5
 }
 apoyo_p5_3= { # apoyo p5
     "img_apoyo_p5_3": os.path.join("imgs_programa","img_apoyo_p5_3.png"),
-    "img_apoyo_p5_33": os.path.join("imgs_programa","img_apoyo_p5_33.png"),
     "img_apoyo_p5_333": os.path.join("imgs_programa","img_apoyo_p5_333.png"),
     "img_apoyo_p5_3333": os.path.join("imgs_programa","img_apoyo_p5_3333.png"),
 }
 apoyo_p5_4= { # apoyo p5
     "img_apoyo_p5_4": os.path.join("imgs_programa","img_apoyo_p5_4.png"),
     "img_apoyo_p5_44": os.path.join("imgs_programa","img_apoyo_p5_44.png"),
-    "img_apoyo_p5_33": os.path.join("imgs_programa","img_apoyo_p5_33.png"), # Comparte algunas con el 3, no hay problema
-    "img_apoyo_p5_333": os.path.join("imgs_programa","img_apoyo_p5_333.png"),
 }
 
 img_p1_temporal = { # imagen p1 temporales Sacro
@@ -222,7 +219,6 @@ def deslogeo():
     max_attempts = 3 # Máximo de veces que busca la imagen
     attempts = 0 # Inicializa las veces
     process_counter = 0
-    max_process_repeats = 50
 
     pyautogui.press('esc')  # Presiona la tecla Esc
     time.sleep(1) # Tiempo que tarda pisando la tecla
@@ -257,7 +253,7 @@ def deslogeo():
 
             if locationdeslogeosi_img:
                 center = pyautogui.center(locationdeslogeosi_img)
-                time.sleep(7)  # Esperar
+                time.sleep(5)  # Esperar
                 pyautogui.doubleClick(center)  # Realiza un doble clic en la posición center
                 deslogeo_si_encontrado = True
                 break  # Salir del bucle for
@@ -269,23 +265,19 @@ def deslogeo():
             location = pyautogui.locateOnScreen(image_pathX4, confidence=0.9)
 
             if location:
-                time.sleep(4)  # Espera 4 segundos antes de repetir el proceso
+                time.sleep(3.5)  # Espera 4 segundos antes de repetir el proceso
                 attempts = 0  # Reinicia el contador de intentos
             else:
                 attempts += 1
                 time.sleep(1)
 
-        # Verifica si el proceso se ha repetido 50 veces
-        if process_counter >= max_process_repeats:
-            sys.exit()
-
         # Incrementa el contador de procesos
         process_counter += 1
-    time.sleep(1.8)
+    time.sleep(1)
     pyautogui.moveTo(366, 508)
     # Desplazar el mouse hacia arriba 10 "clics"
     pyautogui.scroll(180)
-    time.sleep(1.5)
+    time.sleep(1.4)
     pyautogui.scroll(180)
     pass
 def logeo(position):
@@ -295,15 +287,12 @@ def logeo(position):
     max_process_repeats = 50
     encontrado=0
     verificacion=0
-    time.sleep(3)
-    print("Logeo: despues de time.sleep 3")
+    time.sleep(1)
 
     while encontrado==0:
-        print("Logeo: entra en el while encontrado")
         if(encontrado==1):
             break
         while attempts < max_attempts:
-            print("Logeo: entra en el while attempts")
             if(encontrado==1):
                 break
             for _, image_pathAS in logeo_img.items(): # Buscar imágen de logeo_img
@@ -311,7 +300,6 @@ def logeo(position):
                 if(encontrado==1):
                     break
                 if locationlogeo_img:
-                    print("Logeo: entra en el if locationlogeo_img")
                     encontrado=0
                     time.sleep(2)  # Espera 2 segundos antes de repetir el proceso
                     attempts = 0  # Reinicia el contador de intentos
@@ -319,7 +307,6 @@ def logeo(position):
                     process_counter += 1
                     
                 else:
-                    print("Logeo: entra en el else locationlogeo_img")
                     attempts += 1
                     if(attempts>=4):
                         encontrado=1
@@ -330,6 +317,7 @@ def logeo(position):
 
             # Verifica si el proceso se ha repetido 50 veces
             if process_counter >= max_process_repeats:
+                pyautogui.hotkey('alt', 'f4')
                 verificacion=1
                 pyautogui.click(1353, 13)# Cerrar juego y abrir
                 time.sleep(2)
@@ -370,56 +358,14 @@ def logeo(position):
             time.sleep(10)
             pyautogui.doubleClick(position)
 
-    time.sleep(2.5)
+    time.sleep(1.5)
     pass
 #-------------------------------------------------------------------------------------------------------
 #P11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 def action_for_p1(position):
     logeo(position)
-    pyautogui.rightClick(1026, 372)
-    encontradas=0
-    pyautogui.moveTo(0, 0)
-    time.sleep(0.5)
-    for _, image_path228Q in minarboton_img.items(): # Buscar botón minar
-        locationminarboton_img5Q=None
-        locationminarboton_img5Q = pyautogui.locateOnScreen(image_path228Q, confidence=0.9)
-        if locationminarboton_img5Q:
-            encontradas+=1
-            center = pyautogui.center(locationminarboton_img5Q)
-            del locationminarboton_img5Q
-            pyautogui.click(center)
-            time.sleep(5.2) # Tiempo que tarda en llegar y minar
-            pyautogui.rightClick(251, 283)
-            pyautogui.moveTo(0, 0)
-            time.sleep(0.5)
-            for _, image_path228QR in minarboton_img.items(): # Buscar botón minar
-                locationminarboton_img5QR=None
-                locationminarboton_img5QR = pyautogui.locateOnScreen(image_path228QR, confidence=0.9)
-                if locationminarboton_img5QR:
-                    encontradas+=1
-                    center = pyautogui.center(locationminarboton_img5QR)
-                    del locationminarboton_img5QR
-                    pyautogui.click(center)
-                    time.sleep(4.1) # Tiempo que tarda en llegar y minar
-                    pyautogui.click(205, 283)
-
-    pyautogui.rightClick(554, 304)
-    pyautogui.moveTo(0, 0)
-    encontradas=0
-    time.sleep(0.5)
-    for _, image_path228QQ in minarboton_img.items(): # Buscar botón minar
-        locationminarboton_img5QQ=None
-        locationminarboton_img5QQ = pyautogui.locateOnScreen(image_path228QQ, confidence=0.9)
-        if locationminarboton_img5QQ:
-            encontradas+=1
-            center = pyautogui.center(locationminarboton_img5QQ)
-            del locationminarboton_img5QQ
-            pyautogui.click(center)
-            time.sleep(4.1) # Tiempo que tarda en llegar y minar
-
     contador=0
     encontradas=0
-    no_encontro_nada=0
     pyautogui.moveTo(0, 0)
     time.sleep(0.5)
     for _, image_path11X in img_p1_temporal.items(): # Buscar filón
@@ -442,11 +388,9 @@ def action_for_p1(position):
                     del locationminarboton_img5
                     pyautogui.click(center)
                     time.sleep(6) # Tiempo que tarda en llegar y minar
-                    no_encontro_nada=1
         contador+=1
     contador=0
     encontradas=0
-    no_encontro_nada=0
     pyautogui.moveTo(0, 0)
     time.sleep(0.5)
     while contador<25:
@@ -474,9 +418,9 @@ def action_for_p1(position):
                         center = pyautogui.center(locationminarboton_img5)
                         del locationminarboton_img5
                         pyautogui.click(center)
-                        time.sleep(6.2) # Tiempo que tarda en llegar y minar
-                        no_encontro_nada=1
+                        time.sleep(6) # Tiempo que tarda en llegar y minar
             contador+=1
+    pyautogui.moveTo(0, 0)
     time.sleep(0.5)
     for _, image_path228QRS in minarboton_img.items(): # Buscar botón minar
         locationminarboton_img5QRS=None
@@ -487,19 +431,6 @@ def action_for_p1(position):
             del locationminarboton_img5QRS
             pyautogui.click(center)
             time.sleep(4.1) # Tiempo que tarda en llegar y minar
-    if(no_encontro_nada==1):
-        foundX=False
-        pyautogui.moveTo(0, 0)
-        time.sleep(0.5)
-        for _, image_path in img_unica.items():
-            if foundX:
-                break
-            loc_unica = pyautogui.locateOnScreen(image_path, confidence=0.75)
-            if loc_unica:
-                foundX=True
-                center = pyautogui.center(loc_unica)
-                pyautogui.click(center)
-                time.sleep(4)
     deslogeo()
     pass
 #P22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
